@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8"> 
+    <meta name="description" content="Html tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>bootstrap-lab-3-page</title>
+
+
+    <!--
+        Created Login page
+        **Referred as per 
+        the orginal GitHub
+        sign-in page**
+        *Added appropriate
+        logo/label/input/
+        button/etc.
+        *Colours/font-style/
+        size/border-styles
+        may not accurate
+        *Used internal &
+        inline css
+    -->
+
+    <style>
+
+    .container{
+       margin-top:30px;
+       width:fit-content; 
+       position: relative;
+       right: 53px; 
+    }
+
+    img{
+        height: 48px;
+        width: 48px;
+        position: relative;
+        left: 132px; 
+        cursor: pointer;  
+    }
+
+    h1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.89);
+        position: relative;
+        left:73px;
+        top: 30px;
+        word-spacing: 2px;
+        letter-spacing: -1px;
+    }   
+
+    form{
+        border:1px solid rgba(157, 157, 160, 0.295);
+        border-radius: 7px;
+        height:235px;
+        width:305px;
+        padding: 22px 8px 12px 8px;
+        background-color: rgba(200, 209, 216, 0.151);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        position: relative;
+        top: 40px;     
+    }
+
+    .form-control{
+        width:263px;
+        height:32px;
+        border:1px solid rgba(175, 169, 169, 0.411);
+        border-radius: 7px;
+    }
+
+    .form-control:focus{
+        border-color:rgba(10, 81, 212, 0.89);    
+    }
+
+    label,input{
+        position: relative;
+        left: 13px;  
+    }
+
+    #paswordlabel{
+        position: relative;
+        float: left;
+    }
+
+    .form-group2{
+        position: relative;
+        top: 14px;
+        display: inline;
+    }
+
+
+    .btn{
+        border:1px solid rgba(0, 100, 0, 0.397);
+        border-radius: 6px;
+        width:263px;
+        height:32px;
+        position: relative;
+        top:35px;
+        left: 13px;
+    }
+
+    #forgetpassword{ 
+        display: inline-block;
+        text-decoration: none;
+        font-size: 12px;
+        position: relative;
+        top:15px;
+        left: 125px;
+        cursor: pointer; 
+    }
+
+ 
+    #newtogithub{
+        border: 1px solid rgba(157, 157, 160, 0.295); 
+        border-radius: 7px;
+        width: 305px;
+        height: 52px;
+        position: relative;
+        top:55px;
+        padding: 14px 22px 11px 22px;
+        font-size: 14px;
+        text-align: center;     
+    }
+
+    #newtogithub  p{
+        display: inline;
+    }
+
+    #navigation{
+        position: relative;
+        top: 130px;
+        left:40px;
+        font-size: 12px;
+        word-spacing: 12px;
+        letter-spacing:0px;
+    }
+
+    #navigation a{  
+        word-spacing: normal;
+    }
+     
+    #navlast{
+        color: rgba(0, 0, 0, 0.712);
+    }
+
+    #navlast:hover{
+        color: rgba(6, 119, 224, 0.911);
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!--**CONTAINER-STARTS**-->
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 offset-3 col-sm-12 col-md-12 " >
+
+
+
+
+
+<!--header & logo starts-->
+
+<header>
+
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github logo">
+
+                  <h1>Sign in to GitHub</h1>
+
+</header>
+<!--header & logo ends-->
+
+
+
+
+
+
+
+<!--**form-starts**-->
+<main>
+
+    <form method="post" action="login.github">
+
+                <div class="form-group1">
+
+                  <label for="user">Username or email address</label>
+
+                  <input class="form-control" id="user" type="email text" name="user" required autofocus>
+
+                </div>
+        
+        
+        <a id="forgetpassword" href="#">Forget password?</a> <!--forget-link-->
+        
+
+                <div class="form-group2">
+
+                   <label id="paswordlabel" for="password">Password</label>
+                   <input class="form-control" id="password" type="password" name="password" required>
+
+                </div>
+
+
+        <button class="btn btn-success">
+
+                  <span style="position: relative;
+
+                  bottom: 5px;font-size: 14px;font-weight: 500;"> <!--button-->
+
+                  Sign in</span>
+
+        </button>
+
+
+    </form>
+<!--**form-ends**-->
+
+
+
+
+
+
+
+
+<!--signup-starts-->
+                <div id="newtogithub">
+
+                  <p>New to GitHub?</p>
+
+                  <a href="#">Create an account.</a> 
+
+                </div>
+        
+</main>
+<!--sign-up-ends-->
+
+
+
+
+
+
+
+
+<!--navigation-starts-->
+
+<footer>
+
+    <nav id="navigation">
+
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a id="navlast" href="#">Contact GitHub</a>
+
+    </nav>
+
+</footer>
+<!--navigation-ends-->
+
+
+
+            </div>
+<!--col-ends-->
+
+
+        </div>
+<!--row-ends-->
+
+
+    </div> 
+<!--**CONTAINER-ENDS**-->
+
+
+
+
+
+
+</body>
+
+</html>
